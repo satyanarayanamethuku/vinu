@@ -1,0 +1,212 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>STUDENT PANEL || BEST</title>
+	<!-- core:css -->
+	<link rel="stylesheet" href="{% static 'student/assets/vendors/core/core.css' %}">
+	<!-- endinject -->
+	<!-- plugin css for this page -->
+	<link rel="stylesheet" href="{% static 'student/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css' %}">
+	<!-- end plugin css for this page -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="{% static 'student/assets/fonts/feather-font/css/iconfont.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- endinject -->
+	<!-- Layout styles -->  
+	<link rel="stylesheet" href="{% static 'student/assets/css/style.css' %}">
+	<!-- End layout styles -->
+	<link rel="shortcut icon" href="{% static 'student/assets/images/favicon1.png' %}" />
+	<!-- Global site tag (gtag.js) - Google Analytics start -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146586338-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-146586338-1');
+	</script>
+	<!-- Google Analytics end -->
+	<style>
+        #demo{
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+        .inactive{
+            color:#640606;
+        }
+    </style>
+	</head>
+	<body>
+	<div class="main-wrapper">
+
+	<!-- partial:partials/_sidebar.html -->
+	<nav class="sidebar">
+	<div class="sidebar-header">
+	<a href="#" class="sidebar-brand">
+	BEST
+	</a>
+	<div class="sidebar-toggler not-active">
+	<span></span>
+	<span></span>
+	<span></span>
+	</div>
+	</div>
+	<div class="sidebar-body">
+	<ul class="nav">
+	<li class="nav-item"><a href="/student_profile_view" class="nav-link"><i class="link-icon" data-feather="user"></i><span class="link-title">Profile</span></a></li>
+	<li class="nav-item"><a href="/student_notification" class="nav-link"><i class="link-icon" data-feather="bell"></i><span class="link-title">Notifications</span></a></li>
+	<li class="nav-item"><a href="/student_mocktest" class="nav-link"><i class="link-icon" style="color:#640606;" data-feather="message-square"></i><span class="link-title inactive">Mock Test</span></a></li>
+	<!--<li class="nav-item"><a href="mocktest.html" class="nav-link"><i class="link-icon" data-feather="message-square"></i><span class="link-title">Mock Test</span></a></li>-->
+	<li class="nav-item"><a href="/student_test" class="nav-link"><i class="link-icon" data-feather="box"></i><span class="link-title">Take Test</span></a></li>
+	</ul>
+	</div>
+	</nav>
+	<!-- partial -->
+
+	<div class="page-wrapper">
+
+	<!-- partial:partials/_navbar.html -->
+	<nav class="navbar">
+	<a href="#" class="sidebar-toggler">
+	<i data-feather="menu"></i>
+	</a>
+	<div class="navbar-content">
+	<ul class="navbar-nav">						
+	<li class="nav-item dropdown nav-notifications">
+	<a class="nav-link dropdown-toggle" href="/student_notification" role="button">
+	<i data-feather="bell"></i>
+	<div class="indicator">
+	<div class="circle"></div>
+	</div>
+	</a>
+	</li>
+	<li class="nav-item dropdown nav-profile">
+	<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<img src="{% static 'student/assets/images/sss.png' %}" alt="profile">
+	</a>
+	<div class="dropdown-menu" aria-labelledby="profileDropdown">
+	<div class="dropdown-header d-flex flex-column align-items-center">
+	<div class="figure mb-3">
+	<img src="{% static 'student/assets/images/sss.png' %}" alt="">
+	</div>
+	<div class="info text-center">
+	<p class="name font-weight-bold mb-0">{{dbuser.firstName}}{{dbuser.lastName}}</p>
+	<p class="email text-muted mb-3">{{dbuser.emailID}}</p>
+	</div>
+	</div>
+	<div class="dropdown-body">
+	<ul class="profile-nav p-0 pt-3">
+	<li class="nav-item">
+	<a href="/student_profile_view" class="nav-link">
+	<i data-feather="user"></i>
+	<span>Profile</span>
+	</a>
+	</li>
+	<li class="nav-item">
+	<a href="javascript:;" class="nav-link">
+	<i data-feather="log-out"></i>
+	<span><a href="/student_logout">Log Out</a></span>
+	</a>
+	</li>
+	</ul>
+	</div>
+	</div>
+	</li>
+	</ul>
+	</div>
+	</nav>
+	<!-- partial -->
+
+	<div class="page-content" style="text-align:center;background-image:url({% static 'student/assets/images/image.jpg' %});background-repeat: no-repeat;background-size:100% 100%">
+	    <i class="fa fa-calendar" aria-hidden="true" style="font-size:100px;color:red;text-align:center;border:1px solid #ccc;padding:20px;box-shadow: 5px 10px 18px #888888;"></i>
+	    <h2 class="blink"  style="margin-top:3%;">Coming Soon</h2>       
+        <p id="demo"></p>
+        <style>
+            #demo{
+                font-size:40px;
+                margin-top:3%;
+                color:#ffffff;
+            }
+            @-webkit-keyframes blinker {
+                from {opacity: 1.0;}
+                to {opacity: 0.0;}
+            }
+            .blink{
+                text-decoration: blink;
+                -webkit-animation-name: blinker;
+                -webkit-animation-duration: 0.6s;
+                -webkit-animation-iteration-count:infinite;
+                -webkit-animation-timing-function:ease-in-out;
+                -webkit-animation-direction: alternate;
+            }
+        </style>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 12, 2020 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+	</div>
+
+	<!-- partial:partials/_footer.html -->
+	<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
+	<p class="text-muted text-center text-md-left">Copyright © 2019 BEST. All rights reserved</p>
+	<!-- <p class="text-muted text-center text-md-left mb-0 d-none d-md-block">Handcrafted With <i class="mb-1 text-primary ml-1 icon-small" data-feather="heart"></i></p> -->
+	</footer>
+	<!-- partial -->
+
+	</div>
+	</div>
+	<!-- core:js -->
+	<script src="{% static 'student/assets/vendors/core/core.js' %}"></script>
+	<!-- endinject -->
+	<!-- plugin js for this page -->
+	<script src="{% static 'student/assets/vendors/chartjs/Chart.min.js' %}"></script>
+	<script src="{% static 'student/assets/vendors/jquery.flot/jquery.flot.js' %}"></script>
+	<script src="{% static 'student/assets/vendors/jquery.flot/jquery.flot.resize.js"></script>
+	<script src="{% static 'student/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js' %}"></script>
+	<script src="{% static 'student/assets/vendors/apexcharts/apexcharts.min.js' %}"></script>
+	<script src="{% static 'student/assets/vendors/progressbar.js/progressbar.min.js' %}"></script>
+	<!-- end plugin js for this page -->
+	<!-- inject:js -->
+	<script src="{% static 'student/assets/vendors/feather-icons/feather.min.js' %}"></script>
+	<script src="{% static 'student/assets/js/template.js' %}"></script>
+	<!-- endinject -->
+	<!-- custom js for this page -->
+	<script src="{% static 'student/assets/js/dashboard.js' %}"></script>
+	<script src="{% static 'student/assets/js/datepicker.js' %}"></script>
+	<!-- end custom js for this page -->
+	</body>
+
+	<!-- Mirrored from www.nobleui.com/html/template/demo_1/dashboard-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Oct 2019 07:42:02 GMT -->
+</html>    

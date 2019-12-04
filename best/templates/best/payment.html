@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.tonatheme.com/2017/childcare-preview/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Sep 2019 05:54:51 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<title>BEST || Bharat Excellence Scholarshiop Test</title>
+
+	<!-- responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+   
+  
+    
+   
+	<!-- Responsive stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicaon/favicon1.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/favicaon/favicon1.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'images/favicaon/favicon1.png' %}" sizes="16x16">
+</head>
+<body>
+    {%  for message in messages %}
+     <script>
+          alert('{{ message }}');
+    </script>
+    {% endfor %}
+    <div class="container" style="text-align:center;margin-top:2%;">
+        <img src="{% static 'images/qrcode.png' %}" width="300px">
+        <div class="row">
+            <div class="col-md-offset-1 col-sm-offset-2 col-xs-offset-2 col-lg-offset-1 col-md-8 col-sm-8 col-xs-8 col-lg-8" style="text-align:center;margin-top:2%;">
+                <form class="form-horizontal" action="/bhimapp/" method="POST">
+                    {% csrf_token %}
+        			<div class="form-group">
+        				<label class="control-label col-sm-4" for="tid">TRANSACTION ID:<sup style="color:red;">*</sup></label>
+        				<div class="col-sm-8">
+        					<input type="text" class="form-control input" id="tid" placeholder="Enter Transaction ID....." name="tid" required>
+        				</div>
+        			</div>
+        			<div class="form-group">
+        				<label class="control-label col-sm-4" for="tphn">PHONE NUMBER<sup style="color:red;">*</sup></label>
+        				<div class="col-sm-8">
+        					<input type="text" class="form-control input" id="tphn" placeholder="Enter Phone Number......" name="tphn" required>
+        				</div>
+                    </div>
+                    <div class="form-group">
+        				<label class="control-label col-sm-4" for="tphn">EMAIL ID<sup style="color:red;">*</sup></label>
+        				<div class="col-sm-8">
+        					<input type="email" class="form-control input" id="email" placeholder="Enter Email ID Which is Registered in Application Form......" name="email" autocomplete="off" required>
+        				</div>
+                    </div>
+                    <div class="form-group">
+        				<label class="control-label col-sm-4" for="tphn">FULL NAME<sup style="color:red;">*</sup></label>
+        				<div class="col-sm-8">
+        					<input type="text" class="form-control input" id="name" placeholder="Enter Full Name Which is Registered in Application Form......" name="name" required>
+        				</div>
+        			</div>
+        		    <p style="text-align:center;margin-left:2%;color:#000000;"><b>NOTE:</b><sup style="color:red;">*</sup> Enter the mobile number which is registered to your respective bank account connecting this QR Code.</p>
+        			<div class="form-group" style="margin-top:3%;text-align:center;">
+					    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                            <input type="submit" class="btn btn-warning" target="_blank" style="color:#640606;font-weight:bold;">
+					    </div>
+					</div>
+        		</form>
+            </div>        		
+    	</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+{% extends 'best/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({% static 'images/resources/breadcrumb-bg.jpg' %});">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+	            <div class="breadcrumbs">
+	                <h1>Contact</h1>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start breadcrumb bottom area-->     
+<section class="breadcrumb-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="left pull-left">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li class="active">Contact</li>
+                    </ul>
+                </div>
+                <!--<div class="right pull-right">-->
+                <!--    <a href="#">-->
+                <!--        <span><i class="fa fa-share-alt" aria-hidden="true"></i>Share</span> -->
+                <!--    </a>   -->
+                <!--</div>    -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb bottom area-->
+
+<!--Start contact form area-->
+{%  for message in messages %}
+               <script>
+                 alert('{{ message }}');
+               </script>
+{% endfor %}
+<section class="contact-form-area">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h3>Get Touch With Us</h3>
+            <span class="border mar0auto"></span>
+        </div>
+        <div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-content">
+                    <div class="col-lg-8 col-md-7">
+                        <div class="contact-form">
+                            <form id="contact-form" name="contact_form" class="default-form" action="/contact/" method="post">
+                                    {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" name="form_name" value="" placeholder="Your Name*" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" name="form_email" value="" placeholder="Your Mail*" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" name="form_phone" value="" placeholder="Phone"  pattern="[0-9]{10}" title="your mobile number must be 10 digites" required="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="form_subject" value="" placeholder="Subject" required="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea name="form_message" placeholder="Your Message.." required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                        <button class="thm-btn bgclr-1" type="submit" data-loading-text="Please wait..." style="color:#640606;">send message</button>
+                                    </div>
+                                </div>
+                            </form>  
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5">
+                        <div class="contact-carousel">
+                            <!--Start single item-->
+                            <div class="single-item">
+                                <div class="sec-title">
+                                    <h3 style="color:#640606;">Contact Address</h3>
+                                    <span class="border mar0auto"></span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-location-cursor"style="color:#640606;"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <p>Bharat Excellence Scholarship Test,</p>
+                                            <p>#4th Floor,Reliance Cyber Ville,</p>
+                                            <p>Near Image Hospital,</p>
+                                            <p>Madhapur, Hyd - 500081</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="flaticon-telephone"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <p><a href="tel:+919504323456" style="color:#ffffff;">+91 95043 23456, </a><a href="tel:+919169323456" style="color:#ffffff;">+91 91693 23456</a></p>
+                                            <p><a href="mailto:info@ibest.co.in" style="color:#ffffff;">info@ibest.co.in</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon-holder">
+                                            <span class="fa fa-globe"style="color:#640606;"></span>
+                                        </div>
+                                        <div class="text-holder">
+                                            <p><a href="https://ibest.co.in" style="color:#ffffff;">ibest.co.in</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Start single item-->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End contact form area-->
+
+<!--Start contact map area-->
+<section class="contact-map-area">
+    <div class="container-fluid">
+        <div class="google-map-inner">
+            <iframe width="100%" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=reliance%20cyber%20ville%2C%20near%20image%20hospitals%2C%20madhapur%2C%20hyd%20500081&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </div>
+</section>
+<!--End contact map area-->
+
+
+
+{% endblock %}

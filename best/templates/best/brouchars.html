@@ -1,0 +1,81 @@
+{% extends 'best/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({% static 'images/resources/breadcrumb-bg.jpg' %});">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+	            <div class="breadcrumbs">
+	                <h1>BROCHURES</h1>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start breadcrumb bottom area-->     
+<section class="breadcrumb-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="left pull-left">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li class="active">Brochures</li>
+                    </ul>
+                </div>
+                <!--<div class="right pull-right">-->
+                <!--    <a href="#">-->
+                <!--        <span><i class="fa fa-share-alt" aria-hidden="true"></i>Share</span> -->
+                <!--    </a>   -->
+                <!--</div>    -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb bottom area-->
+
+<section class="choosing-area">
+    <div class="container">
+        <div class="row">
+            <div class="sec-title text-center" style="margin-top:-4%;">
+                <h1>Our Brochures</h1>
+                <span class="border mar0auto"></span>
+            </div>
+            <div class="row">
+    
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/brochures/1.png' %}"/>
+                    <!--</a>-->
+                </div>
+    
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/brochures/brochure2.png' %}"/>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/brochures/4.png' %}"/>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+    
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/brochures/3.png' %}"/>
+                </div>
+                
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/6.png' %}"/>
+                </div>
+    
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/brochures/5.png' %}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'admin12/index2.html' %}
+
+{% block body_block %}
+
+<div class="page-content">
+    <h3>Student Profiles</h3> <br><br>
+        <div class="table-responsive">          
+            <table class="table table-hover table-bordered">
+                <tr>
+                       <th>Date</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Date_of_Birth</th>
+                        <th>Board</th>
+                        <th>FatherName</th>
+                        <th>MotherName</th>
+                        <th>Qualifiaction</th>
+                        <th>SchoolName</th>
+                        <th>SchoolAddress</th>
+                        <th>HomeAddress</th>
+                        <th>State</th>
+                        <th>AadharNumber</th>
+                        <th>PhoneNumber</th>
+                        <th>EmailId</th>
+                        
+                        <td>Referral</td>
+                        <th>Username</th>
+                
+                        <th>Action</th>
+                        <th>Status</th>
+
+                </tr>
+                {% for b in date %}
+                <tr>   <td>{{b.date}}</td>
+                        <td>{{ b.firstName }}</td>
+                        <td>{{ b.lastName }}</td>
+                        <td>{{ b.date_of_birth }}</td>
+                        <td>{{ b.board }}</td>
+                        <td>{{ b.fatherName }}</td>
+                        <td>{{ b.motherName }}</td>
+                        <td>{{ b.qualification }}</td>
+                        <td>{{ b.schoolName }}</td>
+                        <td>{{ b.schoolAddress }}</td>
+                        <td>{{ b.homeAddress }}</td>
+                        <td>{{ b.state }}</td>
+                        <td>{{ b.aadharNumber }}</td>
+                        <td>{{ b.phoneNumber }}</td>
+                        <td>{{ b.emailID }}</td>
+                        <td>{{b.referral}}</td>
+                        <td>{{ b.username }}</td>
+                
+                
+                        <td><a href="/stuedit/{{ b.id }}">Edit</a> &nbsp;&nbsp;<a href="/studelete/{{ b.id }}">Delete</a> </td>
+                        <td>{{ b.status }}</td>
+                </tr>
+                {% endfor %}
+               
+            </table>
+        </div>
+        <br><br>
+        
+    </div>
+
+
+
+{% endblock %}

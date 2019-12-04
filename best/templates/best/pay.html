@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>payment</title>
+</head>
+<body>
+  <div align=center>
+    <ul>
+        <li style="color:#000000;"><a><img src="{% static 'images/razorpay.png' %}" style="width:30%"> &nbsp;&nbsp;&nbsp;[Payment GateWay]</a></li>
+        <li style="color:#000000;">(Transaction charges Applicable)<sup style="color:red;">*</sup></li>
+        <hr style="border:1px solid #000000;">
+        <li style="color:#000000;"><a href="/payment2" target="_blank"><img src="{% static 'images/bhimupi.png' %}" style="width:30%"></a></li>
+        <li style="color:#000000;">(No Transaction charges Applicable)<sup style="color:red;">*</sup></li>
+    </ul>
+  </div>
+</body>
+</html>

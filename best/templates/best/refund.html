@@ -1,0 +1,85 @@
+{% extends 'best/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<!--Start breadcrumb area-->     
+<section class="breadcrumb-area" style="background-image: url({% static 'images/resources/breadcrumb-bg.jpg' %});">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+	            <div class="breadcrumbs">
+	                <h1>Refund POLICIES</h1>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start breadcrumb bottom area-->     
+<section class="breadcrumb-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="left pull-left">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                        <li class="active">Refund Policies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb bottom area-->
+<section class="choosing-area">
+    <div class="container">
+        <div class="row" style="margin-left:2%;margin-right:2%;">
+                <div class="sec-title text-center" style="margin-top:-4%;">
+                    <h3>Refund Policies</h3>
+                    <span class="border mar0auto"></span>
+                </div>
+                <div style="color:#000000;text-align:justify;">
+                    <ul>
+                    <li style="list-style: square !important;">If there is any error occurred during the payment ,  any amount has debited from your account and the candidate won't get the User details within 3-4 working days from the date of transaction, then the refund process will take 4-5 working days and the refund transaction id will shared to you. </li>
+                    <li style="list-style: square !important;">If any error occurred after  the refund process was intiated from our side,  please contact respective bank with your refund transaction id.</li>
+                    <li style="list-style: square !important;">For any information regarding the refund policy you can contact us.</li>
+                    </ul>
+                </div>
+            </div>
+        <!--</div>-->
+    </div>
+</section>
+
+<!--Start Brand area-->  
+<section class="brand-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sec-title text-center">
+                    <h1>Our Partners</h1>   
+                    <span class="border mar0auto"></span>
+                </div>
+                <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12" style="text-align:center;margin-top:3%;">
+                    <h5 style="margin-bottom:5%;">Organised By</h5>
+                    <img src="{% static 'images/brand/aviralogo.png' %}" alt="Awesome Brand Image" style="margin-top:-10%;">
+                </div>
+                <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12" style="margin-top:1%;">
+                    <h5 class="partner" style="text-align:center;margin-bottom:5%;">Technical Partner</h5>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                        <img src="{% static 'images/brand/pnv.png' %}" alt="Awesome Brand Image">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                        <img src="{% static 'images/brand/wz.jpg' %}" alt="Awesome Brand Image" style="width:80%;">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-lg-3 col-xs-12" style="text-align:center; margin-top:3%;">
+                    <h5 style="margin-bottom:5%;">Event By</h5>
+                    <img src="{% static 'images/brand/dmc.png' %}" alt="Awesome Brand Image" style="width:50%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Brand area--> 
+{% endblock %}
