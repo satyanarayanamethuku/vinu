@@ -333,3 +333,7 @@ class StudentDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('display_view')
 
 
+# def Razorpay_Search(request):
+#     pass
+
+
