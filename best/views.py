@@ -339,3 +339,12 @@ class StudentDeleteView(LoginRequiredMixin, DeleteView):
 
 # def satya_request(request):
 #     pass
+
+
+@login_required(login_url='/login/')
+def razorpay_search_date(request):
+    if request.method=='POST':
+        date=request.POST['e1']
+        add=ApplicationFormClass.objects.filter(emailID__iexact=date)
+        return render(request, 'admin12/studentprofile.html',{'disp':add})
+    return render(request, 'admin12/studentprofile.html')

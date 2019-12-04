@@ -82,6 +82,7 @@ urlpatterns = [
     path('time/',views.time),
     path('admin_search_date/', views.admin_search_date),
     url(r'^delete/(?P<pk>\d+)/$', views.StudentDeleteView.as_view()),
+    path('razorpay_search_date/',views.razorpay_search_date)
    
 
 ]
