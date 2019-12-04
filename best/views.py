@@ -337,3 +337,5 @@ class StudentDeleteView(LoginRequiredMixin, DeleteView):
 #     pass
 
 
+# def satya_request(request):
+#     pass
