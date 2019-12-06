@@ -269,7 +269,7 @@ def quiz(request):
 
 @login_required(login_url='/login/')
 def student_profile_display(request):
-    disp = ApplicationFormClass.objects.all()
+    disp = ApplicationFormClass.objects.all()[::-1]
     return render(request, 'admin12/studentprofile.html',{'disp':disp})
 
 # @login_required(login_url='/login/')

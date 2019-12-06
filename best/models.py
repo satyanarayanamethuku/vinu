@@ -30,6 +30,10 @@ class ApplicationFormClass(models.Model):
     def __str__(self):
         return self.firstName
 
+    
+    # class Meta:
+    #     ordering = ['firstName']
+
     def get_absolute_url(self):
         return reverse('display_view')
     
