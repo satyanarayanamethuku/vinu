@@ -269,7 +269,7 @@ def quiz(request):
 
 @login_required(login_url='/login/')
 def student_profile_display(request):
-    disp = ApplicationFormClass.objects.all()[::-1]
+    disp = ApplicationFormClass.objects.all()
     return render(request, 'admin12/studentprofile.html',{'disp':disp})
 
 # @login_required(login_url='/login/')
@@ -348,3 +348,7 @@ def razorpay_search_date(request):
         add=ApplicationFormClass.objects.filter(emailID__iexact=date)
         return render(request, 'admin12/studentprofile.html',{'disp':add})
     return render(request, 'admin12/studentprofile.html')
+
+
+# def sandeep_view(request):
+#     pass
