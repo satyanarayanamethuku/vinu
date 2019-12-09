@@ -24,9 +24,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'er+%8b+a7#po76o)29=*0(^ngo_$d7*wi-bgi_5ckf_j_c_u2n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[ STATIC_DIR,
 
 ]
-STATIC_ROOT = "/bestfinal/best/static"
+
 # EMAIL_HOST = 'smtp.gmail.com'  
 # EMAIL_PORT = 587  
 # EMAIL_HOST_USER = 'best.scholarstest@gmail.com'  
@@ -143,5 +143,21 @@ EMAIL_USE_TLS=True
 DEFAULT_FROM_EMAIL  = 'best.scholarstest@gmail.com'
 
 
+
+
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# SECURE_SSL_REDIRECT=True
+# CSRF_COOKIE_SECURE = True
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_CONTENT_TYPE_NOSNIFF=True
+# SESSION_COOKIE_SECURE=True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS =True
+# SECURE_BROWSER_XSS_FILTER=True
+# SECURE_HSTS_PRELOAD=True
+# X_FRAME_OPTIONS='DENY'

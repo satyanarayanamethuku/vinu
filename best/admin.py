@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ApplicationFormClass,Contact,Bhim_App, Quiz
+from .models import ApplicationFormClass,Contact,Bhim_App, Quiz,Profile
 # Register your models here.
 
 class ApplicationFormClassAdmin(admin.ModelAdmin):
@@ -10,3 +10,4 @@ admin.site.register(ApplicationFormClass, ApplicationFormClassAdmin)
 admin.site.register(Contact)
 admin.site.register(Bhim_App)
 admin.site.register(Quiz)
+admin.site.register(Profile)
